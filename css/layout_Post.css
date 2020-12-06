@@ -1,0 +1,67 @@
+.container-post {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "hd"
+  "sd"
+  "main"
+  "ft";
+  grid-row-gap: 10px;
+}
+
+.box-post {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-post {
+  grid-area: hd;
+  border-bottom: 2px solid #6c826e;
+}
+
+.sidebar-post{
+  grid-area: sd;
+  margin: 15px 0 15px 0;
+}
+
+.author-bio-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-post {
+  grid-area: main;
+}
+
+.footer-post {
+  grid-area: ft;
+  border-top: 2px solid #6c826e;
+}
+
+.author-info-post {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.social-post {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 10px 0;
+}
+
+@media(min-width:1100px) {
+  .container-post {
+    display: grid;
+    grid-template-columns: 25% 10% 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "hd hd hd"
+    "sd main main"
+    "ft ft ft";
+    grid-row-gap: 10px;
+  }
+}
